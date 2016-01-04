@@ -29,11 +29,15 @@ bundle install
 foreman start
 ```
 
-Test your phonny app
+## Usage
+
+You need to set 2 environment variables
 
 ```bash
-rake test
+PHONE_NUMBER=+19194107522
+TWILIO_AUTH_TOKEN=enter_twilio_auth_token
 ```
+
 ## Contributing
 
 See the [CONTRIBUTING Guidelines](https://github.com/chrisenytc/phonny/blob/master/CONTRIBUTING.md)
