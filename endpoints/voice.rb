@@ -3,7 +3,7 @@
 
 class PhonnyApplication < Sinatra::Application
   post '/voice' do
-    from = /^client/ =~ params['From'] ? nil : params['From']
+    from = /^client/ =~ params['From'] ? Config.phone_number : params['From']
 
     response = Twilio::TwiML::Response.new do |r|
       r.Dial callerId: from, timeout: 120, record: true, action: '/voice/handler' do |d|
