@@ -5,7 +5,7 @@ class PhonnyApplication < Sinatra::Application
   post '/sms' do
     sender = params['From']
     body = params['Body']
-    msg = "#{body}\nThis message came from #{sender}."
+    msg = "#{body}\n\nThis message came from #{sender}."
 
     response = Twilio::TwiML::Response.new do |r|
       r.Message msg, to: Config.phone_number,
