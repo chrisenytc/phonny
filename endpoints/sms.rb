@@ -9,6 +9,7 @@ class PhonnyApplication < Sinatra::Application
 
     response = Twilio::TwiML::Response.new do |r|
       r.Message msg, to: Config.phone_number,
+                     from: Config.phone_number,
                      action: '/sms/handler',
                      statusCallback: '/sms/callback'
     end
