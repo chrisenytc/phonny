@@ -6,6 +6,10 @@ class Config
     ENV['TWILIO_AUTH_TOKEN']
   end
 
+  def self.twilio_phone_number
+    ENV['TWILIO_PHONE_NUMBER']
+  end
+
   def self.phone_number
     ENV['PHONE_NUMBER']
   end
